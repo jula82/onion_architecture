@@ -1,8 +1,10 @@
 const { ObjectId } = require('mongodb');
 const Book = require('../domain/book');
+const IRepository = require('../interfaces/IRepository');
 
-class BookRepository {
+class BookRepository extends IRepository {
   constructor(database) {
+    super();
     this.collection = database.collection('books');
   }
 
