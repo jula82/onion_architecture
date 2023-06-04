@@ -1,8 +1,10 @@
 const Book = require('../domain/book');
+const IBookService = require('../interfaces/IBookService');
 
-class BookService {
+class BookService extends IBookService {
 
   constructor(bookRepository) {
+    super();
     this.bookRepository = bookRepository;
   }
 
